@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -54,7 +53,7 @@
             color: #2C2A29;
             -webkit-tap-highlight-color: transparent;
         }
-        h1, h2, h3, .font-serif {
+        h1, h2, h3, h4, .font-serif {
             font-family: 'Cormorant Garamond', serif;
         }
         /* Hide scrollbars for clean UI in horizontal lists if needed */
@@ -81,7 +80,7 @@
 <header class="sticky top-0 z-40 bg-cream/95 backdrop-blur-md border-b border-stone-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
 
-        <!-- Logo (Updated with Image) -->
+        <!-- Logo -->
         <a href="#" class="flex items-center gap-2 md:gap-3 text-left">
             <img src="images/logo.png" alt="Suchi's Creation Logo" class="h-10 md:h-12 w-auto object-contain">
             <div class="flex flex-col">
@@ -374,16 +373,21 @@
     </div>
 </section>
 
-<!-- Exhibition Section (Perfected Mobile Match) -->
-<section id="exhibition" class="py-16 md:py-24 bg-cream">
+<!-- Exhibition Section (Updated Background & Organizer Details) -->
+<section id="exhibition" class="py-16 md:py-24 bg-[#FCF9F2]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white border-[1.5px] border-[#ecdada] rounded-3xl p-6 sm:p-10 md:p-12 relative shadow-sm max-w-lg mx-auto md:max-w-4xl hover:shadow-md transition-shadow">
+        <div class="bg-white border-[1.5px] border-[#ebd9a6]/60 rounded-3xl p-6 sm:p-10 md:p-12 relative shadow-sm max-w-lg mx-auto md:max-w-4xl hover:shadow-md transition-shadow">
 
             <!-- Center Header Container matching the UI spec -->
             <div class="flex flex-col items-center text-center">
                 <span id="exhi-badge" class="bg-[#fcf2f2] text-[#c27a7a] font-bold text-[10px] sm:text-[11px] uppercase tracking-[0.15em] px-4 py-1.5 rounded-full mb-4 md:mb-5">Mark Your Calendar</span>
-                <h3 id="exhi-title" class="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-800 mb-6">Upcoming Exhibition</h3>
-                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-800 mb-6">Agomoni Puja Exhibition by MAM MAGICS</h2>
+                <h3 id="exhi-title" class="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-800 mb-2">Upcoming Exhibition</h3>
+
+                <!-- NEW: Exhibition Name and Organizer -->
+                <h4 id="exhi-name" class="font-serif text-xl md:text-2xl font-medium text-brand-700 mb-3 italic">Loading Name...</h4>
+                <p class="text-[10px] md:text-xs text-stone-500 uppercase tracking-widest font-semibold mb-6">
+                    Organized by <span id="exhi-organizer" class="text-stone-800 font-bold">Loading Organizer...</span>
+                </p>
 
                 <span class="text-[10px] text-stone-400 uppercase font-bold tracking-[0.2em] mb-1">Date</span>
                 <span id="exhi-date-text" class="text-lg md:text-xl font-bold text-stone-800">1st & 2nd August 2026</span>
@@ -407,7 +411,7 @@
                         <i class="fa-solid fa-clock text-[#7A2031] text-lg mt-0.5 w-5 text-center"></i>
                         <div>
                             <strong class="text-stone-800 block font-bold uppercase tracking-wider text-[11px] mb-1.5">Timings</strong>
-                            <p class="text-stone-600 leading-snug md:text-base">1:00 PM to 8:30 PM (All Days)</p>
+                            <p class="text-stone-600 leading-snug md:text-base">10:00 AM to 8:00 PM</p>
                         </div>
                     </div>
                 </div>
@@ -431,9 +435,9 @@
 <section id="about" class="py-16 md:py-24 bg-white border-t border-stone-100">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-            <!-- Circular Logo Container -->
-            <div class="w-48 h-48 md:w-72 md:h-72 shrink-0 bg-stone-50 rounded-full shadow-sm flex items-center justify-center p-6 border border-stone-200">
-                <img src="images/logo.png" alt="Suchi's Creation Logo" class="w-full h-full object-contain">
+            <!-- Portrait Container -->
+            <div class="w-48 h-64 md:w-72 md:h-96 shrink-0 bg-stone-50 rounded-3xl shadow-sm flex items-center justify-center overflow-hidden border border-stone-200">
+                <img src="images/about.jpeg" alt="Founder of Suchi's Creation" class="w-full h-full object-cover">
             </div>
 
             <!-- Story Description -->
@@ -589,7 +593,6 @@
 <!-- ================================================================= -->
 <!-- MOBILE FIXED BOTTOM ICON MENU (App-Like UX) -->
 <!-- ================================================================= -->
-<!-- Updated: Removed Exhibition, Standardized WhatsApp to blend in as an icon -->
 <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-stone-200 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] px-2 py-1.5 flex items-center justify-around">
     <a href="#" class="flex flex-col items-center justify-center p-1.5 w-1/4 text-brand-700 font-medium">
         <i class="fa-solid fa-house text-lg mb-0.5"></i>
@@ -606,7 +609,6 @@
         </div>
         <span class="text-[10px] tracking-tight font-bold">Live</span>
     </a>
-    <!-- Replaced distinct button with a standard nav icon link to match styling -->
     <a href="#" class="config-wa flex flex-col items-center justify-center p-1.5 w-1/4 text-emerald-600 hover:text-emerald-700 font-medium transition-colors">
         <i class="fa-brands fa-whatsapp text-lg mb-0.5"></i>
         <span class="text-[10px] tracking-tight font-bold">WhatsApp</span>
@@ -625,15 +627,17 @@
      * ==========================================
      */
     const CONFIG = {
-        phone: '8282016187',
+        phone: '9875409913',
         phoneCountryCode: '91', // For WhatsApp formatting
         facebookUrl: 'https://www.facebook.com/suchiscreation.in',
 
-        // Exhibition Configuration (YYYY-MM-DD format for logical check)
+        // Exhibition Configuration
         exhibition: {
-            dateString: '2026-08-15',
-            displayDate: '15th August 2026',
-            venue: 'Birla Academy of Art & Culture, Southern Avenue, Kolkata',
+            name: 'Agomoni - Pre Puja Saree Exhibition',
+            organizer: 'MAM MAGICS',
+            dateString: '2026-08-01', // Date comparison logic uses this
+            displayDate: '1st & 2nd August 2026', // What gets shown in UI
+            venue: 'The Divinity Pavillion Bika',
         }
     };
 
@@ -684,7 +688,7 @@
     }
 
     /**
-     * 3. Exhibition Date Logic (UI matching colors)
+     * 3. Exhibition Date & Detail Logic
      */
     function evaluateExhibitionDate() {
         const exhiDate = new Date(CONFIG.exhibition.dateString);
@@ -695,13 +699,20 @@
 
         const titleEl = document.getElementById('exhi-title');
         const badgeEl = document.getElementById('exhi-badge');
+
+        // Grab new Data Elements
+        const nameEl = document.getElementById('exhi-name');
+        const organizerEl = document.getElementById('exhi-organizer');
         const dateTextEl = document.getElementById('exhi-date-text');
         const venueEl = document.getElementById('exhi-venue');
 
+        // Populate new details
+        if (nameEl) nameEl.textContent = CONFIG.exhibition.name;
+        if (organizerEl) organizerEl.textContent = CONFIG.exhibition.organizer;
         if (dateTextEl) dateTextEl.textContent = CONFIG.exhibition.displayDate;
         if (venueEl) venueEl.textContent = CONFIG.exhibition.venue;
 
-        // Updated styling strings to match the specific color design from image attachment
+        // Visual logic based on past vs upcoming event
         if (exhiDate < today) {
             titleEl.textContent = "Our Last Exhibition";
             badgeEl.textContent = "Completed Event";
@@ -714,7 +725,6 @@
     }
 
     /**
-     * STREAMING_CHUNK:Adding Order CTA Logic
      * 4. Product Order CTA Trigger
      */
     function orderSaree(sareeName, price) {
