@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suchi's Creation | Exclusive Handloom & Designer Sarees</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS for Sliders -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#FDF8F8',
+                            100: '#F9EBEB',
+                            600: '#9E2A3E',
+                            700: '#7A2031',
+                            800: '#5C1825',
+                            900: '#3D1019',
+                        },
+                        cream: '#FAF8F5',
+                        charcoal: '#2C2A29'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom UI Polish */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF8F5;
+            color: #2C2A29;
+            -webkit-tap-highlight-color: transparent;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Hide scrollbars for clean UI in horizontal lists if needed */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Swiper pagination & arrow custom styles */
+        .swiper-pagination-bullet-active { background-color: #7A2031 !important; }
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 14px !important;
+            font-weight: bold !important;
+        }
+    </style>
+</head>
+<body class="pb-24 md:pb-0"> 
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-700 text-white text-xs md:text-sm py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Handcrafted Elegance Direct From Weavers • Worldwide Shipping</span>
+    </div>
+
+    <!-- Desktop & Mobile Header -->
+    <header class="sticky top-0 z-40 bg-cream/95 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex flex-col text-center md:text-left">
+                <span class="font-serif text-2xl md:text-3xl font-bold tracking-tight text-brand-800">Suchi's Creation</span>
+                <span class="text-[9px] md:text-[10px] uppercase tracking-widest text-stone-500 font-semibold -mt-1">Exclusive Saree Boutique</span>
+            </a>
+
+            <!-- Desktop Navigation (Hidden on Mobile) -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-wider font-medium text-stone-700">
+                <a href="#latest-stock" class="hover:text-brand-700 transition-colors">Latest Stock</a>
+                <a href="#categories" class="hover:text-brand-700 transition-colors">Collections</a>
+                <a href="#contact" class="hover:text-brand-700 transition-colors">Contact</a>
+                <a href="#fb-live" class="hover:text-brand-700 transition-colors flex items-center gap-1.5 text-rose-600 font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span> Live Shows
+                </a>
+            </nav>
+
+            <!-- Header CTA (Updated to Call) -->
+            <div class="flex items-center space-x-3">
+                <a href="#" class="config-call bg-brand-700 hover:bg-brand-800 text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full text-xs md:text-sm font-semibold flex items-center gap-2 shadow-sm hover:shadow transition-all tracking-wider uppercase">
+                    <i class="fa-solid fa-phone text-sm"></i>
+                    <span class="hidden sm:inline">Call Us</span>
+                    <span class="sm:hidden">Call</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] md:min-h-[85vh] flex items-center justify-center bg-stone-900 text-white overflow-hidden">
+        
+        <!-- Mobile Background Image (Portrait optimized) -->
+        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=800" 
+             alt="Saree Background Mobile" 
+             class="md:hidden absolute inset-0 w-full h-full object-cover opacity-40 scale-105 animate-[pulse_8s_ease-in-out_infinite]">
+             
+        <!-- Desktop Background Image (Landscape optimized) -->
+        <img src="https://images.unsplash.com/photo-1603228254119-e6a4d015fd81?auto=format&fit=crop&q=80&w=2000" 
+             alt="Saree Background Desktop" 
+             class="hidden md:block absolute inset-0 w-full h-full object-cover opacity-40 scale-105 animate-[pulse_8s_ease-in-out_infinite]">
+             
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-black/30"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center mt-[-40px]">
+            <span class="uppercase tracking-[0.3em] text-xs md:text-sm text-stone-300 mb-4 inline-block font-light">The Heritage Collection</span>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-normal tracking-tight mb-6 leading-tight drop-shadow-sm">
+                Draping Traditions, <br/><span class="italic font-light">Defining Elegance.</span>
+            </h1>
+            <p class="text-stone-300 text-sm md:text-base max-w-xl mx-auto mb-8 font-light leading-relaxed">
+                Explore our handpicked curation of authentic handlooms, pure silks, and designer sarees crafted for timeless beauty.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#latest-stock" class="w-full sm:w-auto bg-brand-700 hover:bg-brand-800 text-white px-8 py-3.5 rounded-full uppercase tracking-wider text-xs font-semibold shadow-lg transition-all">
+                    Explore Latest Stock
+                </a>
+                <a href="#fb-live" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-3.5 rounded-full uppercase tracking-wider text-xs font-semibold transition-all">
+                    Join Facebook Live
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Stock Section -->
+    <section id="latest-stock" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+            <div>
+                <span class="text-brand-700 text-xs font-bold uppercase tracking-widest">Fresh Arrivals</span>
+                <h2 class="text-3xl md:text-5xl font-normal mt-1">Latest Stock</h2>
+            </div>
+            <p class="text-stone-500 text-xs md:text-sm mt-2 md:mt-0 max-w-xs">
+                Swipe to explore our newest additions. Directly order your favorite piece via WhatsApp.
+            </p>
+        </div>
+
+        <!-- Swiper Container with custom arrows -->
+        <div class="relative group">
+            <div class="swiper latest-stock-swiper pb-12">
+                <div class="swiper-wrapper" id="latest-stock-container">
+                    
+                    <!-- Product 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full group/card">
+                            <div class="relative aspect-[3/4] overflow-hidden bg-stone-100">
+                                <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=600" alt="Pure Kanjivaram Silk" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 bg-brand-700 text-white text-[10px] uppercase font-bold px-2.5 py-1 rounded-full tracking-wider shadow-sm">New</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-grow justify-between">
+                                <div>
+                                    <p class="text-[11px] uppercase tracking-wider text-stone-400 font-semibold mb-1">Pure Kanjivaram</p>
+                                    <h3 class="font-serif text-xl font-medium text-stone-800 line-clamp-1">Royal Crimson Kanjivaram</h3>
+                                    <p class="text-brand-700 font-bold text-base mt-2">₹14,500</p>
+                                </div>
+                                <button onclick="orderSaree('Royal Crimson Kanjivaram', '₹14,500')" class="mt-4 w-full bg-stone-900 hover:bg-emerald-600 text-white py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i> Place Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full group/card">
+                            <div class="relative aspect-[3/4] overflow-hidden bg-stone-100">
+                                <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&q=80&w=600" alt="Chikankari Handwork" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-5 flex flex-col flex-grow justify-between">
+                                <div>
+                                    <p class="text-[11px] uppercase tracking-wider text-stone-400 font-semibold mb-1">Chikankari</p>
+                                    <h3 class="font-serif text-xl font-medium text-stone-800 line-clamp-1">Pastel Lavender Modal Silk</h3>
+                                    <p class="text-brand-700 font-bold text-base mt-2">₹6,800</p>
+                                </div>
+                                <button onclick="orderSaree('Pastel Lavender Modal Silk Chikankari', '₹6,800')" class="mt-4 w-full bg-stone-900 hover:bg-emerald-600 text-white py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i> Place Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full group/card">
+                            <div class="relative aspect-[3/4] overflow-hidden bg-stone-100">
+                                <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&q=80&w=600" alt="Pure Mangalgiri" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-5 flex flex-col flex-grow justify-between">
+                                <div>
+                                    <p class="text-[11px] uppercase tracking-wider text-stone-400 font-semibold mb-1">Pure Mangalgiri</p>
+                                    <h3 class="font-serif text-xl font-medium text-stone-800 line-clamp-1">Nizam Border Pattu Saree</h3>
+                                    <p class="text-brand-700 font-bold text-base mt-2">₹5,200</p>
+                                </div>
+                                <button onclick="orderSaree('Nizam Border Mangalgiri Pattu', '₹5,200')" class="mt-4 w-full bg-stone-900 hover:bg-emerald-600 text-white py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i> Place Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full group/card">
+                            <div class="relative aspect-[3/4] overflow-hidden bg-stone-100">
+                                <img src="https://images.unsplash.com/photo-1595039848419-f9f212f38d38?auto=format&fit=crop&q=80&w=600" alt="Pure Pashmina Kanni" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] uppercase font-bold px-2.5 py-1 rounded-full tracking-wider shadow-sm">Exclusive</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-grow justify-between">
+                                <div>
+                                    <p class="text-[11px] uppercase tracking-wider text-stone-400 font-semibold mb-1">Pure Pashmina Kanni</p>
+                                    <h3 class="font-serif text-xl font-medium text-stone-800 line-clamp-1">Kashmiri Weave Pashmina</h3>
+                                    <p class="text-brand-700 font-bold text-base mt-2">₹22,000</p>
+                                </div>
+                                <button onclick="orderSaree('Kashmiri Weave Pure Pashmina Kanni', '₹22,000')" class="mt-4 w-full bg-stone-900 hover:bg-emerald-600 text-white py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i> Place Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full group/card">
+                            <div class="relative aspect-[3/4] overflow-hidden bg-stone-100">
+                                <img src="https://images.unsplash.com/photo-1628891890467-f7833f019f2a?auto=format&fit=crop&q=80&w=600" alt="Designer Saree" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-5 flex flex-col flex-grow justify-between">
+                                <div>
+                                    <p class="text-[11px] uppercase tracking-wider text-stone-400 font-semibold mb-1">Designer</p>
+                                    <h3 class="font-serif text-xl font-medium text-stone-800 line-clamp-1">Organza Floral Embroidery</h3>
+                                    <p class="text-brand-700 font-bold text-base mt-2">₹8,500</p>
+                                </div>
+                                <button onclick="orderSaree('Organza Floral Embroidery Designer Saree', '₹8,500')" class="mt-4 w-full bg-stone-900 hover:bg-emerald-600 text-white py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i> Place Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination mt-6"></div>
+            </div>
+            
+            <!-- Custom Slider Arrows for Desktop/Tablet UI -->
+            <div class="swiper-button-prev !text-stone-800 !w-10 !h-10 !bg-white/95 border border-stone-200 rounded-full shadow-md backdrop-blur-sm -left-4 md:-left-6 hidden sm:flex opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-brand-50 hover:text-brand-700 hover:border-brand-200"></div>
+            <div class="swiper-button-next !text-stone-800 !w-10 !h-10 !bg-white/95 border border-stone-200 rounded-full shadow-md backdrop-blur-sm -right-4 md:-right-6 hidden sm:flex opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-brand-50 hover:text-brand-700 hover:border-brand-200"></div>
+        </div>
+    </section>
+
+    <!-- Category Wise Section -->
+    <section id="categories" class="py-16 bg-stone-100/60 border-y border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-700 text-xs font-bold uppercase tracking-widest">Weaves of India</span>
+                <h2 class="text-3xl md:text-5xl font-normal mt-1">Shop by Category</h2>
+                <p class="text-stone-500 text-xs md:text-sm mt-3">Explore our diverse repertoire of traditional weaves and contemporary artistic creations.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <!-- 1 -->
+                <a href="#" class="group relative h-48 md:h-64 rounded-2xl overflow-hidden bg-stone-800 flex items-end p-4 md:p-6 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-70 transition-all duration-500" alt="Handloom">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="relative z-10 font-serif text-lg md:text-2xl text-white font-medium tracking-wide group-hover:translate-x-1 transition-transform">Handloom</span>
+                </a>
+                <!-- 2 -->
+                <a href="#" class="group relative h-48 md:h-64 rounded-2xl overflow-hidden bg-stone-800 flex items-end p-4 md:p-6 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1628891890467-f7833f019f2a?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-70 transition-all duration-500" alt="Designer">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="relative z-10 font-serif text-lg md:text-2xl text-white font-medium tracking-wide group-hover:translate-x-1 transition-transform">Designer</span>
+                </a>
+                <!-- 3 -->
+                <a href="#" class="group relative h-48 md:h-64 rounded-2xl overflow-hidden bg-stone-800 flex items-end p-4 md:p-6 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-70 transition-all duration-500" alt="Pure Mangalgiri">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="relative z-10 font-serif text-lg md:text-2xl text-white font-medium tracking-wide group-hover:translate-x-1 transition-transform">Pure Mangalgiri</span>
+                </a>
+                <!-- 4 -->
+                <a href="#" class="group relative h-48 md:h-64 rounded-2xl overflow-hidden bg-stone-800 flex items-end p-4 md:p-6 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-70 transition-all duration-500" alt="Chikankari">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="relative z-10 font-serif text-lg md:text-2xl text-white font-medium tracking-wide group-hover:translate-x-1 transition-transform">Chikankari</span>
+                </a>
+                <!-- 5 -->
+                <a href="#" class="group relative h-48 md:h-64 rounded-2xl overflow-hidden bg-stone-800 flex items-end p-4 md:p-6 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-70 transition-all duration-500" alt="Pure Kanjivaram">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="relative z-10 font-serif text-lg md:text-2xl text-white font-medium tracking-wide group-hover:translate-x-1 transition-transform">Pure Kanjivaram</span>
+                </a>
+                <!-- 6 -->
+                <a href="#" class="group relative h-48 md:h-64 rounded-2xl overflow-hidden bg-stone-800 flex items-end p-4 md:p-6 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-70 transition-all duration-500" alt="Silk Gadowal">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="relative z-10 font-serif text-lg md:text-2xl text-white font-medium tracking-wide group-hover:translate-x-1 transition-transform">Silk Gadowal</span>
+                </a>
+                <!-- 7 -->
+                <a href="#" class="group relative h-48 md:h-64 rounded-2xl overflow-hidden bg-stone-800 flex items-end p-4 md:p-6 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1595039848419-f9f212f38d38?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-70 transition-all duration-500" alt="Pure Pashmina Kanni">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="relative z-10 font-serif text-lg md:text-2xl text-white font-medium tracking-wide group-hover:translate-x-1 transition-transform">Pure Pashmina Kanni</span>
+                </a>
+                <!-- 8 -->
+                <a href="#" class="group relative h-48 md:h-64 rounded-2xl overflow-hidden bg-stone-800 flex items-end p-4 md:p-6 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1628891890467-f7833f019f2a?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-70 transition-all duration-500" alt="Pure Motka khaddi">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="relative z-10 font-serif text-lg md:text-2xl text-white font-medium tracking-wide group-hover:translate-x-1 transition-transform">Pure Motka Khaddi</span>
+                </a>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center gap-2 bg-stone-900 hover:bg-brand-700 text-white px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-widest transition-all shadow-md hover:shadow-lg">
+                    <span>View All Collections</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facebook Live & Updates Section -->
+    <section id="fb-live" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-brand-900 via-brand-800 to-stone-900 rounded-3xl overflow-hidden shadow-xl text-white p-8 md:p-14 relative flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-white/5 pointer-events-none"></div>
+            
+            <div class="max-w-xl text-center md:text-left relative z-10">
+                <div class="inline-flex items-center gap-2 bg-red-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-6">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+                    <span>Interactive Shopping</span>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-normal leading-tight mb-4">
+                    Join Our Exclusive <br/><span class="italic font-light">Facebook Live Shows</span>
+                </h2>
+                <p class="text-stone-300 text-xs md:text-sm leading-relaxed font-light">
+                    Experience the drape, texture, and zari shine in real-time! Follow our Facebook page to get instant notifications whenever we go live with special discounts and new launches.
+                </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row md:flex-col gap-4 w-full md:w-auto shrink-0 relative z-10">
+                <a href="https://www.facebook.com/suchiscreation.in" target="_blank" class="bg-[#1877F2] hover:bg-[#1565C0] text-white px-8 py-4 rounded-2xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-3 shadow-lg transition-all">
+                    <i class="fa-brands fa-facebook text-lg"></i>
+                    <span>Follow On Facebook</span>
+                </a>
+                <a href="https://www.facebook.com/suchiscreation.in" target="_blank" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-2xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
+                    <i class="fa-solid fa-bell text-amber-400"></i>
+                    <span>Get Live Alerts</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhibition Section (Perfected Mobile Match) -->
+    <section id="exhibition" class="py-16 md:py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white border-[1.5px] border-[#ecdada] rounded-3xl p-6 sm:p-10 md:p-12 relative shadow-sm max-w-lg mx-auto md:max-w-4xl hover:shadow-md transition-shadow">
+                
+                <!-- Center Header Container matching the UI spec -->
+                <div class="flex flex-col items-center text-center">
+                    <span id="exhi-badge" class="bg-[#fcf2f2] text-[#c27a7a] font-bold text-[10px] sm:text-[11px] uppercase tracking-[0.15em] px-4 py-1.5 rounded-full mb-4 md:mb-5">Mark Your Calendar</span>
+                    <h3 id="exhi-title" class="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-800 mb-6">Upcoming Exhibition</h3>
+                    
+                    <span class="text-[10px] text-stone-400 uppercase font-bold tracking-[0.2em] mb-1">Date</span>
+                    <span id="exhi-date-text" class="text-lg md:text-xl font-bold text-stone-800">15th August 2026</span>
+                </div>
+
+                <hr class="border-stone-100 my-8">
+
+                <!-- Split Layout on Desktop, Stacked on Mobile -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    
+                    <!-- Venue & Details List (Left Aligned neatly) -->
+                    <div class="space-y-6 text-sm">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot text-[#7A2031] text-lg mt-0.5 w-5 text-center"></i>
+                            <div>
+                                <strong class="text-stone-800 block font-bold uppercase tracking-wider text-[11px] mb-1.5">Venue</strong>
+                                <p id="exhi-venue" class="text-stone-600 leading-snug md:text-base">Birla Academy of Art & Culture, Southern Avenue, Kolkata</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-clock text-[#7A2031] text-lg mt-0.5 w-5 text-center"></i>
+                            <div>
+                                <strong class="text-stone-800 block font-bold uppercase tracking-wider text-[11px] mb-1.5">Timings</strong>
+                                <p class="text-stone-600 leading-snug md:text-base">1:00 PM to 8:30 PM (All Days)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description Box & CTA -->
+                    <div class="bg-[#f9f8f6] p-6 rounded-2xl border border-stone-100/80 shadow-[inset_0_1px_3px_rgba(0,0,0,0.02)]">
+                        <p class="text-sm md:text-base text-stone-600 leading-relaxed mb-6 font-medium">
+                            Featuring an exclusive collection of Puja Special Kanjivarams, authentic Handlooms, and handcrafted Pashminas. Meet the designer in person!
+                        </p>
+                        <a href="#" class="config-wa block w-full text-center bg-[#6d2433] hover:bg-[#571d29] shadow-md text-white text-[11px] md:text-xs font-bold uppercase tracking-[0.1em] py-4 rounded-xl transition-all">
+                            Inquire On WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW Contact Us Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white border-t border-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-700 text-xs font-bold uppercase tracking-widest">Get In Touch</span>
+                <h2 class="text-3xl md:text-5xl font-normal mt-1">Contact Us</h2>
+                <p class="text-stone-500 text-xs md:text-sm mt-3">Visit our boutique studio or send us a quick message directly to our WhatsApp.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-0 bg-stone-50 rounded-3xl overflow-hidden shadow-sm border border-stone-200/60 max-w-5xl mx-auto">
+                
+                <!-- Boutique Location Details (Dark Card) -->
+                <div class="md:col-span-2 p-8 md:p-12 bg-stone-900 text-white flex flex-col justify-center relative overflow-hidden">
+                    <!-- Subtle background pattern/glow -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-700/20 rounded-full blur-3xl"></div>
+                    
+                    <h3 class="text-2xl md:text-3xl font-serif mb-8 relative z-10">Boutique Studio</h3>
+                    <div class="space-y-6 text-sm font-light text-stone-300 relative z-10">
+                        <div class="flex items-start gap-4 group">
+                            <div class="w-10 h-10 shrink-0 rounded-full bg-white/10 flex items-center justify-center text-brand-500 group-hover:bg-brand-700 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <p class="leading-relaxed mt-1">R.K. Road, Nimta,<br>Khudirampally,<br>Kolkata, West Bengal - 700049</p>
+                        </div>
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-10 h-10 shrink-0 rounded-full bg-white/10 flex items-center justify-center text-brand-500 group-hover:bg-brand-700 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <p class="config-phone-text text-base font-medium">Loading...</p>
+                        </div>
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-10 h-10 shrink-0 rounded-full bg-white/10 flex items-center justify-center text-brand-500 group-hover:bg-brand-700 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <p>hello@suchiscreation.in</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form (Direct to WhatsApp) -->
+                <div class="md:col-span-3 p-8 md:p-12 bg-white">
+                    <h3 class="text-2xl font-serif mb-2 text-stone-800">Send us a message</h3>
+                    <p class="text-xs text-stone-500 mb-8">Fill out the details below and we will connect with you via WhatsApp.</p>
+                    
+                    <form id="whatsapp-contact-form" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-1.5 ml-1">Your Name</label>
+                                <input type="text" id="contact-name" required placeholder="e.g. Aditi Sharma" class="w-full px-5 py-3.5 rounded-xl border border-stone-200 bg-stone-50 focus:outline-none focus:ring-2 focus:ring-brand-700/20 focus:border-brand-700 transition-colors text-sm text-stone-800 placeholder-stone-400">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-1.5 ml-1">City / Location</label>
+                                <input type="text" id="contact-city" placeholder="e.g. Mumbai" class="w-full px-5 py-3.5 rounded-xl border border-stone-200 bg-stone-50 focus:outline-none focus:ring-2 focus:ring-brand-700/20 focus:border-brand-700 transition-colors text-sm text-stone-800 placeholder-stone-400">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-1.5 ml-1">Your Message</label>
+                            <textarea id="contact-message" rows="4" required placeholder="I am looking for..." class="w-full px-5 py-3.5 rounded-xl border border-stone-200 bg-stone-50 focus:outline-none focus:ring-2 focus:ring-brand-700/20 focus:border-brand-700 transition-colors text-sm text-stone-800 resize-none placeholder-stone-400"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 shadow-md text-white font-bold uppercase tracking-widest text-xs py-4 rounded-xl flex items-center justify-center gap-2.5 transition-all mt-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Send via WhatsApp
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 text-xs pt-16 pb-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+                <!-- Col 1 -->
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-tight text-white block mb-2">Suchi's Creation</span>
+                    <p class="text-stone-400 max-w-sm mb-4 leading-relaxed font-light">
+                        Curating the finest handloom, silk, and designer sarees from master weavers across India. Elegance woven into every thread.
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <a href="https://www.facebook.com/suchiscreation.in" target="_blank" class="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center text-white hover:bg-brand-700 transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="config-wa w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center text-white hover:bg-emerald-600 transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="config-call w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center text-white hover:bg-brand-700 transition-colors">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Address -->
+                <div>
+                    <h4 class="text-white uppercase tracking-widest font-semibold mb-4 text-[11px]">Boutique Studio</h4>
+                    <p class="leading-relaxed font-light">
+                        R.K. Road, Nimta,<br>
+                        Khudirampally,<br>
+                        Kolkata, West Bengal, India - 700049
+                    </p>
+                    <p class="mt-3 font-medium text-stone-300">
+                        Phone: <span class="config-phone-text">Loading...</span>
+                    </p>
+                </div>
+
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h4 class="text-white uppercase tracking-widest font-semibold mb-4 text-[11px]">Categories</h4>
+                    <ul class="grid grid-cols-2 gap-2 font-light">
+                        <li><a href="#categories" class="hover:text-white transition-colors">Handloom</a></li>
+                        <li><a href="#categories" class="hover:text-white transition-colors">Designer</a></li>
+                        <li><a href="#categories" class="hover:text-white transition-colors">Pure Mangalgiri</a></li>
+                        <li><a href="#categories" class="hover:text-white transition-colors">Chikankari</a></li>
+                        <li><a href="#categories" class="hover:text-white transition-colors">Pure Kanjivaram</a></li>
+                        <li><a href="#categories" class="hover:text-white transition-colors">Silk Gadowal</a></li>
+                        <li><a href="#categories" class="hover:text-white transition-colors">Pashmina Kanni</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-stone-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+                <p>&copy; 2026 Suchi's Creation. All rights reserved.</p>
+                <p>Designed for mobile luxury & simplicity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================================================================= -->
+    <!-- MOBILE FIXED BOTTOM ICON MENU (App-Like UX) -->
+    <!-- ================================================================= -->
+    <!-- Updated: Removed Exhibition, Standardized WhatsApp to blend in as an icon -->
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-stone-200 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] px-2 py-1.5 flex items-center justify-around">
+        <a href="#" class="flex flex-col items-center justify-center p-1.5 w-1/4 text-brand-700 font-medium">
+            <i class="fa-solid fa-house text-lg mb-0.5"></i>
+            <span class="text-[10px] tracking-tight">Home</span>
+        </a>
+        <a href="#categories" class="flex flex-col items-center justify-center p-1.5 w-1/4 text-stone-500 hover:text-brand-700 font-medium transition-colors">
+            <i class="fa-solid fa-layer-group text-lg mb-0.5"></i>
+            <span class="text-[10px] tracking-tight">Weaves</span>
+        </a>
+        <a href="#fb-live" class="flex flex-col items-center justify-center p-1.5 w-1/4 text-red-600 font-medium relative">
+            <div class="relative">
+                <i class="fa-solid fa-video text-lg mb-0.5"></i>
+                <span class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-red-600"></span>
+            </div>
+            <span class="text-[10px] tracking-tight font-bold">Live</span>
+        </a>
+        <!-- Replaced distinct button with a standard nav icon link to match styling -->
+        <a href="#" class="config-wa flex flex-col items-center justify-center p-1.5 w-1/4 text-emerald-600 hover:text-emerald-700 font-medium transition-colors">
+            <i class="fa-brands fa-whatsapp text-lg mb-0.5"></i>
+            <span class="text-[10px] tracking-tight font-bold">WhatsApp</span>
+        </a>
+    </nav>
+
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Application Architecture & Logic -->
+    <script>
+        /**
+         * ==========================================
+         * CENTRALIZED CONFIGURATION
+         * Configure all contact & exhibition info here
+         * ==========================================
+         */
+        const CONFIG = {
+            phone: '8282016187',
+            phoneCountryCode: '91', // For WhatsApp formatting
+            facebookUrl: 'https://www.facebook.com/suchiscreation.in',
+            
+            // Exhibition Configuration (YYYY-MM-DD format for logical check)
+            exhibition: {
+                dateString: '2026-08-15', 
+                displayDate: '15th August 2026',
+                venue: 'Birla Academy of Art & Culture, Southern Avenue, Kolkata',
+            }
+        };
+
+        /**
+         * 1. Initialize Swiper Slider with active navigation arrows
+         */
+        const swiper = new Swiper('.latest-stock-swiper', {
+            slidesPerView: 1.2,
+            spaceBetween: 16,
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                480: { slidesPerView: 2.2, spaceBetween: 16 },
+                768: { slidesPerView: 3.2, spaceBetween: 20 },
+                1024: { slidesPerView: 4, spaceBetween: 24 }
+            }
+        });
+
+        /**
+         * 2. Dynamically Populate Links & Handlers
+         */
+        function populateConfiguration() {
+            const fullWaNumber = `${CONFIG.phoneCountryCode}${CONFIG.phone}`;
+            const defaultWaUrl = `https://wa.me/${fullWaNumber}?text=Hello%20Suchi's%20Creation,%20I%20would%20like%20to%20inquire%20about%20your%20saree%20collection.`;
+            
+            // Update Text Displays
+            document.querySelectorAll('.config-phone-text').forEach(el => {
+                el.textContent = CONFIG.phone;
+            });
+
+            // Update Phone Call Links
+            document.querySelectorAll('.config-call').forEach(el => {
+                el.setAttribute('href', `tel:${CONFIG.phone}`);
+            });
+
+            // Update standard WhatsApp Links
+            document.querySelectorAll('.config-wa').forEach(el => {
+                el.setAttribute('href', defaultWaUrl);
+                el.setAttribute('target', '_blank');
+            });
+        }
+
+        /**
+         * 3. Exhibition Date Logic (UI matching colors)
+         */
+        function evaluateExhibitionDate() {
+            const exhiDate = new Date(CONFIG.exhibition.dateString);
+            const today = new Date();
+            
+            exhiDate.setHours(0, 0, 0, 0);
+            today.setHours(0, 0, 0, 0);
+
+            const titleEl = document.getElementById('exhi-title');
+            const badgeEl = document.getElementById('exhi-badge');
+            const dateTextEl = document.getElementById('exhi-date-text');
+            const venueEl = document.getElementById('exhi-venue');
+
+            if (dateTextEl) dateTextEl.textContent = CONFIG.exhibition.displayDate;
+            if (venueEl) venueEl.textContent = CONFIG.exhibition.venue;
+
+            // Updated styling strings to match the specific color design from image attachment
+            if (exhiDate < today) {
+                titleEl.textContent = "Our Last Exhibition";
+                badgeEl.textContent = "Completed Event";
+                badgeEl.className = "bg-stone-200 text-stone-600 font-bold text-[10px] sm:text-[11px] uppercase tracking-[0.15em] px-4 py-1.5 rounded-full mb-4 md:mb-5";
+            } else {
+                titleEl.textContent = "Upcoming Exhibition";
+                badgeEl.textContent = "Mark Your Calendar";
+                badgeEl.className = "bg-[#fcf2f2] text-[#c27a7a] font-bold text-[10px] sm:text-[11px] uppercase tracking-[0.15em] px-4 py-1.5 rounded-full mb-4 md:mb-5";
+            }
+        }
+
+        /**
+         * 4. Product Order CTA Trigger
+         */
+        function orderSaree(sareeName, price) {
+            const fullWaNumber = `${CONFIG.phoneCountryCode}${CONFIG.phone}`;
+            const message = `Hello Suchi's Creation, I would like to place an order for:\n\n✨ *Item:* ${sareeName}\n💰 *Price:* ${price}\n\nPlease let me know the availability and payment details.`;
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${fullWaNumber}?text=${encodedMessage}`, '_blank');
+        }
+
+        /**
+         * 5. Handle Dedicated Contact Form Submission via WhatsApp
+         */
+        document.getElementById('whatsapp-contact-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const city = document.getElementById('contact-city').value || 'Not Specified';
+            const message = document.getElementById('contact-message').value;
+            const fullWaNumber = `${CONFIG.phoneCountryCode}${CONFIG.phone}`;
+            
+            const waText = `*New Inquiry from Website*\n\n*Name:* ${name}\n*City:* ${city}\n*Message:* ${message}`;
+            const encodedText = encodeURIComponent(waText);
+            
+            window.open(`https://wa.me/${fullWaNumber}?text=${encodedText}`, '_blank');
+        });
+
+        // Initialize Everything
+        document.addEventListener('DOMContentLoaded', () => {
+            populateConfiguration();
+            evaluateExhibitionDate();
+        });
+    </script>
+</body>
+</html>
