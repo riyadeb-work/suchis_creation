@@ -1,0 +1,4 @@
+name: suchis-creation
+recipe: lamp
+config:
+  webroot: .
